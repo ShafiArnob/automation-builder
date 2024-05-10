@@ -34,3 +34,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Running ngrok
+Docker
+
+```bash
+docker pull ngrok/ngrok
+docker run --net=host -it -e NGROK_AUTHTOKEN=<Auth Token> ngrok/ngrok:latest http http://localhost:8080
+```
+
+Clerk Webhook
+Webhooks -> Add Webhook
+ngrok-url/api/clerk-webhook
+
+ngrok http --domain=ngrok-url https://localhost:3000
