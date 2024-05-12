@@ -1,4 +1,5 @@
 "use client";
+import WorkflowForm from "@/components/forms/WorkflowForm";
 import CustomModal from "@/components/global/CustomModal";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/providers/modal-provider";
@@ -10,13 +11,14 @@ type Props = {};
 const WorkflowButton = (props: Props) => {
   const { setOpen, setClose } = useModal();
   const handleClick = () => {
-    <CustomModal
-      title="Create a Workflow Automation"
-      subheading="Workflows are powerful taht helpyou automate tasks"
-    >
-      <h1>Hello</h1>
-    </CustomModal>;
-    console.log("Workflow Button");
+    setOpen(
+      <CustomModal
+        title="Create a Workflow Automation"
+        subheading="Workflows are powerful taht helpyou automate tasks"
+      >
+        <WorkflowForm />
+      </CustomModal>
+    );
   };
   return (
     <Button size={"icon"} onClick={handleClick}>
